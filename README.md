@@ -12,7 +12,7 @@ Other solutions usually feed your keys from lastpass to ssh-add, which is not id
 
 Some even expect you to store your private key passphrase in lastpass, while leaving up to you the storage of your key pairs, and expecting you to have them in your `~/.ssh`. 
 
-Instead, lastpass-ssh-agent expect you to put your public key and unencrypted private key in a secure note on lastpass under `keys\ssh`. It being an ssh agent, it integrates perfectly with the ssh command, and will ask you
+Instead, lastpass-ssh-agent expect you to put your public key and unencrypted private key in a secure note on lastpass under `keys\ssh`. It being an ssh agent, it integrates perfectly with the ssh command, and will ask your vault password when needed.
 
 ## Building
 
@@ -39,5 +39,5 @@ And that's pretty much it. Now, you just need to add your keys to lastpass under
 
 ## F.A.Q
 
-Q. Why do I need to put my private keys unencrypted into lastpass?
-A. Because lastpass already encrypts them for you; storing the passphrase alongside the encrypted private key is effectively defeating the purpose of encrypting them, so we're just dropping the passphrase.
+**Q.** Why do I need to put my private keys unencrypted into lastpass?  
+**A.** Because lastpass already encrypts them for you; storing the passphrase alongside the encrypted private key is effectively defeating the purpose of encrypting them, so we're just dropping the passphrase.  

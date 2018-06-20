@@ -1,0 +1,7 @@
+#!/bin/sh
+
+lpass show \
+    -G "${LASTPASS_SSH_PUBKEY_DIR:-keys\\\\ssh\\\\pub}"'/..*' \
+    -x --format='%an:%fn:%fv' \
+  | grep ":${LASTPASS_SSH_PUBKEY_FIELD:-Public Key}:" \
+  | sed "s/:${LASTPASS_SSH_PUBKEY_FIELD:-Public Key}//"

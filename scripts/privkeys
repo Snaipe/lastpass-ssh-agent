@@ -1,0 +1,7 @@
+#!/bin/sh
+
+lpass show \
+    -G "${LASTPASS_SSH_KEY_DIR:-keys\\\\ssh}"'/..*' \
+    -x --json \
+  | grep -Eo '"note":.*' \
+  | sed -E -e 's/"note": "(.*)"/\1/g'
